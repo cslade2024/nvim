@@ -14,20 +14,30 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+
+  --Telescope
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
+
+  --Tab Management
   'romgrk/barbar.nvim',
+
+  --File Sidebar
   'nvim-tree/nvim-tree.lua',
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
   },
+
+  --LSP Installatoin
   {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
   },
+
+  --LSP Configuration
   {
     'neovim/nvim-lspconfig',
     config = function()
@@ -39,6 +49,7 @@ require("lazy").setup({
     end,
   },
 
+  --Autocomplete
   {
     'hrsh7th/nvim-cmp',
     dependencies = {
@@ -51,10 +62,13 @@ require("lazy").setup({
     },
   },
 
+  --Bottom Status Bar
   {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
+
+  --Theme
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -63,7 +77,10 @@ require("lazy").setup({
       vim.cmd("colorscheme tokyonight")
     end,
   },
+
+  --Terminal
   {'akinsho/toggleterm.nvim', version = "*", config = true},
+
 })
 
 require('plugins.lualine')
