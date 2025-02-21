@@ -27,6 +27,9 @@ require("lazy").setup({
   --Tab Management
   'romgrk/barbar.nvim',
 
+  --Formatter Configuration
+  'jose-elias-alvarez/null-ls.nvim',
+
   --File Sidebar
   'nvim-tree/nvim-tree.lua',
   {
@@ -60,7 +63,7 @@ require("lazy").setup({
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
-      'L3MON4D3/LuaSnip', -- Snippet engine
+      'L3MON4D3/LuaSnip',         -- Snippet engine
       'saadparwaiz1/cmp_luasnip', -- Snippet completions
     },
   },
@@ -82,7 +85,7 @@ require("lazy").setup({
   },
 
   --Terminal
-  {'akinsho/toggleterm.nvim', version = "*", config = true},
+  { 'akinsho/toggleterm.nvim', version = "*", config = true },
 
 })
 
@@ -93,6 +96,7 @@ require('plugins.terminal')
 require('plugins.cmp')
 require('plugins.barbar')
 require('plugins.tree')
+require('plugins.null_ls')
 require('plugins.lsps.lua_ls')
 
 vim.opt.tabstop = 2
