@@ -9,10 +9,10 @@ cmp.setup({
   },
   mapping = {
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }), -- Scroll up in docs
-    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }), -- Scroll down in docs
-    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }), -- Trigger completion
-    ["<C-e>"] = cmp.mapping(cmp.mapping.abort(), { "i", "c" }), -- Close completion
-    ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Confirm selection
+    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),  -- Scroll down in docs
+    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),  -- Trigger completion
+    ["<C-e>"] = cmp.mapping(cmp.mapping.abort(), { "i", "c" }),         -- Close completion
+    ["<CR>"] = cmp.mapping.confirm({ select = true }),                  -- Confirm selection
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -34,9 +34,9 @@ cmp.setup({
   },
   sources = cmp.config.sources({
     { name = "nvim_lsp" }, -- LSP completions
-    { name = "luasnip" }, -- Snippet completions
-    { name = "buffer" }, -- Buffer completions
-    { name = "path" }, -- Path completions
+    { name = "luasnip" },  -- Snippet completions
+    { name = "buffer" },   -- Buffer completions
+    { name = "path" },     -- Path completions
   }),
 })
 
